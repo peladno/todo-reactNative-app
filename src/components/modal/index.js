@@ -20,10 +20,10 @@ const ModalTask = ({
             <Text style={styles.selectedTask}>{selectedTask?.value}</Text>
           </View>
           <View style={styles.modalButtonContainer}>
-            <Button title="Cancel" color="#9A848F" onPress={onHandleCancel} />
+            <Button title="Cancel" color="#52489C" onPress={onHandleCancel} />
             <Button
               title="Delete"
-              color="#9A848F"
+              color="#52489C"
               onPress={onHandleDeleteItem}
             />
           </View>

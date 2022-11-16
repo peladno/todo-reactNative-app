@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     listItemContainer: {
         paddingVertical: 20,
-        backgroundColor: '#9A848F',
+        backgroundColor: '#065143',
         borderRadius: 5,
         shadowColor: "#000",
         shadowOffset: {

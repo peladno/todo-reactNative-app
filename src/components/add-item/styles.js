@@ -10,6 +10,6 @@ export const styles = StyleSheet.create({
       input: {
         width: '80%',
         borderBottomWidth: 1,
-        borderBottomColor: '#9A848F',
+        borderBottomColor: '#52489C',
       },
 })
