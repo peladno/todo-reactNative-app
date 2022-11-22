@@ -1,68 +1,20 @@
 import { useState } from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
+import { Home, TaskPage } from "./components/index";
 import { styles } from "./styles";
-import { AddItem, TaskItem, ModalTask, ListItem } from "./components/index";
 
 export default function App() {
-  const [task, setTask] = useState("");
-  const [taskList, setTaskList] = useState([]);
-  const [modalVisible, setModalVisible] = useState(false);
-  const [selectedTask, setSelectedTask] = useState(null);
+  const [enter, setEnter] = useState(false);
 
-  const onHandleTask = () => {
-    setTaskList((prevTaskList) => [
-      ...prevTaskList,
-      {
-        id: Math.random().toString(),
-        value: task,
-      },
-    ]);
-    setTask("");
+  const onHandleEnter = (entering) => {
+    setEnter(entering);
   };
 
-  const onHandleSelected = (item) => {
-    setSelectedTask(item);
-    setModalVisible(!modalVisible);
-  };
+  let content;
 
-  const renderItem = ({ item }) => (
-    <TaskItem item={item} onHandleSelected={onHandleSelected} />
-  );
+  enter
+    ? (content = <TaskPage />)
+    : (content = <Home onHandleEnter={onHandleEnter} />);
 
-  const onHandleCancel = () => {
-    setModalVisible(!modalVisible);
-  };
-
-  const onHandleDeleteItem = () => {
-    setTaskList((prevTaskList) =>
-      prevTaskList.filter((item) => item.id !== selectedTask.id)
-    );
-    setModalVisible(!modalVisible);
-  };
-
-  const onHandleChange = (text) => setTask(text);
-
-  return (
-    <View style={styles.container}>
-      <AddItem
-        task={task}
-        onHandleTask={onHandleTask}
-        onHandleChange={onHandleChange}
-      />
-      <View style={styles.listContainer}>
-        <Text style={styles.listTitle}>Todo List</Text>
-      </View>
-      <ListItem
-        data={taskList}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-      />
-      <ModalTask
-        onHandleCancel={onHandleCancel}
-        onHandleDeleteItem={onHandleDeleteItem}
-        modalVisible={modalVisible}
-        selectedTask={selectedTask}
-      />
-    </View>
-  );
+  return <View style={styles.appContainer}>{content}</View>;
 }
