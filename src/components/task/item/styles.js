@@ -21,5 +21,7 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         color: Colors.white,
         paddingHorizontal: 10,
+        fontFamily: "Lora-regular",
+
     },
 });

@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     },
     listTitle: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontFamily: "Lora-bold",
         marginBottom: 10,
         color: Colors.text,
     },

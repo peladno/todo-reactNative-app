@@ -10,5 +10,6 @@ export const styles = StyleSheet.create({
   homeTitle: {
     marginVertical: 30,
     fontSize: 30,
+    fontFamily: "Lora-bold"
   },
 });

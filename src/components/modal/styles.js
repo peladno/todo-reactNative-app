@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontFamily: "Lora-bold",
     marginBottom: 10,
     textAlign: "center",
     justifyContent: "center",
@@ -29,11 +29,12 @@ export const styles = StyleSheet.create({
   modalDetailText: {
     fontSize: 14,
     color: Colors.text,
+    fontFamily: "Lora-regular"
   },
   selectedTask: {
     fontSize: 14,
     color: Colors.text,
-    fontWeight: "bold",
+    fontFamily: "Lora-bold",
     paddingVertical: 20,
   },
   modalButtonContainer: {
