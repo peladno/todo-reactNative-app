@@ -1,14 +1,15 @@
 import { StyleSheet } from "react-native";
+import Colors from "../../utils/Colors";
 
 export const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    backgroundColor: Colors.transparentBackground,
   },
   modalMessageContainer: {
-    backgroundColor: "white",
+    backgroundColor: Colors.white,
     width: "80%",
     padding: 20,
   },
@@ -27,11 +28,11 @@ export const styles = StyleSheet.create({
   },
   modalDetailText: {
     fontSize: 14,
-    color: "#212121",
+    color: Colors.text,
   },
   selectedTask: {
     fontSize: 14,
-    color: "#212121",
+    color: Colors.text,
     fontWeight: "bold",
     paddingVertical: 20,
   },
@@ -41,4 +42,3 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-

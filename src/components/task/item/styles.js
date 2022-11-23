@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
+import Colors from '../../../utils/Colors';
 
 export const styles = StyleSheet.create({
     listItemContainer: {
         paddingVertical: 20,
         backgroundColor: '#065143',
         borderRadius: 5,
-        shadowColor: "#000",
+        shadowColor: Colors.black,
         shadowOffset: {
             width: 0,
             height: 2,
@@ -18,7 +19,7 @@ export const styles = StyleSheet.create({
     },
     listItem: {
         fontSize: 14,
-        color: '#ffffff',
+        color: Colors.white,
         paddingHorizontal: 10,
     },
 });

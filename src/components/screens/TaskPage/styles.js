@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import Colors from '../../../utils/Colors';
 
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#F6F4F5',
+      backgroundColor: Colors.background,
     },
     listContainer: {
         marginHorizontal: 20,
@@ -12,7 +13,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 10,
-        color: '#212121',
+        color: Colors.text,
     },
 
   });
