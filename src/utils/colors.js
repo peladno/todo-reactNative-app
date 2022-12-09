@@ -1,4 +1,4 @@
-export default {
+export const Colors = {
   primary: "#9A848F",
   secondary: "#F2F2F2",
   white: "#FFFFFF",

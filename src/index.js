@@ -3,6 +3,7 @@ import { View, ActivityIndicator } from "react-native";
 import { Home, TaskPage } from "./components/index";
 import { styles } from "./styles";
 import { useFonts } from 'expo-font';
+import AppNavigator from "./navigation";
 
 export default function App() {
  const [loaded] = useFonts({
@@ -10,18 +11,7 @@ export default function App() {
   "Lora-bold": require("../assets/fonts/Lora-Bold.ttf")
  })
 
-  const [enter, setEnter] = useState(false);
-
-  const onHandleEnter = (boolean) => {
-    setEnter(boolean);
-  };
-
-  let content;
-
-  enter
-    ? (content = <TaskPage />)
-    : (content = <Home onHandleEnter={onHandleEnter} />);
-
+ 
 
   if(!loaded){
     return (
@@ -30,5 +20,5 @@ export default function App() {
       </View>
     )
   }
-  return <View style={styles.appContainer}>{content}</View>;
+  return <AppNavigator/>
 }
