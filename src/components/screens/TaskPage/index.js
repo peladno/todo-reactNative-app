@@ -1,13 +1,18 @@
-import { useState } from "react";
-import { View, Text } from "react-native";
-import { styles } from "./styles";
-import { AddItem, TaskItem, ModalTask, ListItem } from "../../index";
+import { useState } from 'react';
+import { View, Text } from 'react-native';
+import { styles } from './styles';
+import { AddItem, TaskItem, ModalTask, ListItem } from '../../index';
+
+import { useSelector } from 'react-redux';
 
 export default function TaskPage() {
-  const [task, setTask] = useState("");
-  const [taskList, setTaskList] = useState([]);
+  const [task, setTask] = useState('');
+  //const [taskList, setTaskList] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
+
+  const taskList = useSelector((state) => state.taskList);
+  //const task = useSelector((state)=> state.task)
 
   const onHandleTask = () => {
     setTaskList((prevTaskList) => [
@@ -17,7 +22,7 @@ export default function TaskPage() {
         value: task,
       },
     ]);
-    setTask("");
+    setTask('');
   };
 
   const onHandleSelected = (item) => {
